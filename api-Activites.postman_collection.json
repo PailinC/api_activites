@@ -7,14 +7,6 @@
 	},
 	"item": [
 		{
-			"name": "get-Activities-notuse-forurefer",
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
-		},
-		{
 			"name": "get-activites",
 			"request": {
 				"method": "GET",
@@ -57,7 +49,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"id\": 123,\"title\":\"update form\",\"dueDate\":\"2022-06-24T09:21:24.772Z\",\"completed\":true}"
+					"raw": "{\n    \"id\": 123,\n    \"title\": \"update form\",\n    \"dueDate\": \"2022-06-24T09:21:24.772Z\",\n    \"completed\": true\n}"
 				},
 				"url": {
 					"raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities",
@@ -71,6 +63,98 @@
 						"api",
 						"v1",
 						"Activities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-activities-id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain; v=1.0"
+					}
+				],
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/12",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Activities",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put-activites-id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain; v=1.0"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json; v=1.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 12,\n    \"title\": \"hiii\",\n    \"dueDate\": \"2022-06-28T22:04:27.490Z\",\n    \"completed\": false\n}"
+				},
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/12",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Activities",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-activities-id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities/7",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Activities",
+						"7"
 					]
 				}
 			},
